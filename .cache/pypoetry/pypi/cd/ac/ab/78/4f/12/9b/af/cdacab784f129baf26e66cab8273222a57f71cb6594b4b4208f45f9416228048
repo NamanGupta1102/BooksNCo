@@ -1,0 +1,1 @@
+9999999999{"name": "Flask-Uploads", "version": "0.2.1", "summary": "Flexible and efficient upload handling for Flask", "platform": "any", "requires_dist": ["Flask>=0.8.0"], "requires_python": null, "files": [], "_cache_version": "1.0.0"}

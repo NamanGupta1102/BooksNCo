@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="static/new_css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="static/new_css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="static/new_css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="static/new_css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="static/new_css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="static/new_css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="static/new_css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="static/new_css/style.css" type="text/css">
+</head>
+<body style="background-color : blue ">
+
+<!--   {% for post in res %}
+<p>
+  ISBN : {{ post.isbn}}
+  Rent/ Sell type : {{post.types}}
+  Category : {{ post.category }}
+  Title: {{ post.title }}
+  Author: {{ post.authour }}
+  Time: {{post.time}}
+  SellID: {{post.sellid}}
+  Pic : <img src="data:image/png;base64,{{images[post.id -1]}}" alt="Not found">
+  <br>
+</p>
+  {% endfor %} -->
+  <!-- <div class="row featured__filter">
+    <div class="col-lg-3 col-md-4 col-sm-6 mix fiction non-fiction">
+      <div class="featured__item">
+          <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text para">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div> -->
+
+{% for post in res%}
+ <div class="col-lg-3 col-md-4 col-sm-6 mix fiction non-fiction">
+                    <div class="featured__item">
+                        <div class="featured__item__pic set-bg" data-setbg="data:image/png;base64,{{images[post.id -1]}}">
+                          <img src="data:image/png;base64,{{images[post.id -1]}}" alt="Not found">
+                            <ul class="featured__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="featured__item__text">
+                            <h6><a href="#">{{post.title}}</a></h6>
+                            <h5>Rs.{{post.price}}</h5>
+                        </div>
+                    </div>
+                </div>
+   
+                {% endfor %}
+
+</body>
+</html>
