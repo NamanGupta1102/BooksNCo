@@ -369,7 +369,7 @@ def contact():
     return render_template('contact.html',uid = uid)
 # x="rwsfd erfdx"
 # print(x.title())
-app.run(host='0.0.0.0', port=81)
+app.run(host='0.0.0.0', debug=False)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', debug=False)
